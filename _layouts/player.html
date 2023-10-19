@@ -1,0 +1,34 @@
+---
+layout: base
+---
+
+<link href="/style-teams.css?v=1" rel="stylesheet">
+
+{% include nav.html %}
+
+<section class="page-section mt-5 teams-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- Метаданные коллекции: -->
+                {% assign col = site.collections | where: 'label',page.collection | first%}
+
+                <ul>
+                    <li>Команда: {{ col.team }}</li>
+                    <li>Номер: {{ page.number }}</li>
+                    <li>ФИО: {{ page.name }}</li>
+                    <li>Амплуа: {{ page.role }}</li>
+                    <li>ДР: {{ page.birthday | date: "%d.%m.%Y" }}</li>
+                </ul>
+
+                <p>{{ content }}</p>
+
+                <p><a href="/{{ page.collection }}">Вернуться на страницу команды</a></p>
+            </div>
+            <div class="col">
+                <img src="/img/{{ page.collection }}/{{ page.number }}.jpg" alt="№{{ page.number }} {{ page.name }}" class="img-fluid">
+            </div>
+        </div>
+  </section>
+
+{% include footer.html %}

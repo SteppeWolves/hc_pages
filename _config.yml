@@ -1,0 +1,14 @@
+name: Степные волки
+author: http://paul.elms.pro
+
+collections:
+  team2012:
+    output: true
+    team: Степные Волки 2012
+    sort_by: role
+    # permalink: /:collection/:name
+  team2010:
+    output: true
+    team: Степные Волки 2012
+    sort_by: role
+    # permalink: /:collection/:name
